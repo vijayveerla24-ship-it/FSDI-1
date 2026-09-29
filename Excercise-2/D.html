@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Three Frames</title>
 </head>
-<body>
-    
-</body>
+
+<frameset rows="33%,33%,34%" frameborder="1">
+
+    <frame src="image.html" noresize>
+
+    <frame src="paragraph.html" noresize>
+
+    <frame src="link.html" noresize>
+
+    <noframes>
+        <body>
+            Your browser does not support frames.
+        </body>
+    </noframes>
+
+</frameset>
+
 </html>
