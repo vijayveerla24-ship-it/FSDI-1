@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Validation</title>
+  </head>
+  <body>
+    <h1>Registration Page</h1>
+    <form onsubmit="return validate();">
+      <table cellpadding="8">
+        <tr>
+          <td>Name</td>
+          <td><input type="text" id="name" /></td>
+        </tr>
+        <tr>
+          <td>Mobile</td>
+          <td><input type="text" id="mobile" /></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" id="email" /></td>
+        </tr>  
+        <tr>
+          <td colspan="2"><input type="submit" value="Register" /></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function validate() {
+        var name = document.getElementById("name").value;
+        var mobile = document.getElementById("mobile").value;
+        var email = document.getElementById("email").value;
+        var namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+        var mobilePattern = /^[0-9]{10}$/;
+        var emailPattern = /^\w+@\w+\.\w+$/;
+        if (!namePattern.test(name)) {
+          alert(
+            "Name must start with a letter, be alphanumeric and have at least 6 characters",
+          );
+          return false;
+        }
+        if (!mobilePattern.test(mobile)) {
+          alert("Mobile number must have exactly 10 digits");
+          return false;
+        }
+        if (!emailPattern.test(email)) {
+          alert("Email must be in the format xxxx@xxxx.xxx");
+          return false;
+        }
+        alert("Registration successful");
+        return true;
+      }
+    </script>
+  </body>
+</html>

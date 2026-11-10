@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title>JavaScript Functions and Events</title>
+  </head>
+  <body>
+    <h2>JavaScript Functions</h2>
+
+    <input type="text" id="num" placeholder="Enter a number" />
+    <br /><br />
+
+    <button onclick="fact()">Factorial</button>
+    <button onclick="fib()">Fibonacci</button>
+    <button onclick="prime()">Prime</button>
+    <button onclick="pal()">Palindrome</button>
+
+    <p id="result"></p>
+
+    <script>
+      function getNum() {
+        return parseInt(document.getElementById("num").value);
+      }
+
+      function fact() {
+        let n = getNum(),
+          f = 1;
+        for (let i = 1; i <= n; i++) f *= i;
+        document.getElementById("result").innerHTML = "Factorial: " + f;
+      }
+
+      function fib() {
+        let n = getNum(),
+          a = 0,
+          b = 1,
+          s = "";
+        for (let i = 1; i <= n; i++) {
+          s += a + " ";
+          let c = a + b;
+          a = b;
+          b = c;
+        }
+        document.getElementById("result").innerHTML = "Fibonacci: " + s;
+      }
+
+      function prime() {
+        let n = getNum(),
+          s = "";
+        for (let j = 2; j <= n; j++) {
+          let p = true;
+          for (let i = 2; i < j; i++) if (j % i == 0) p = false;
+          if (p) s += j + " ";
+        }
+        document.getElementById("result").innerHTML = "Primes: " + s;
+      }
+
+      function pal() {
+        let n = document.getElementById("num").value;
+        let r = n.split("").reverse().join("");
+        document.getElementById("result").innerHTML =
+          n === r ? "Palindrome" : "Not Palindrome";
+      }
+    </script>
+  </body>
+</html>

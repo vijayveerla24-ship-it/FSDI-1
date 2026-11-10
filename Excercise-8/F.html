@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let amount = Number(prompt("Enter amount:"));
+
+let notes = [500, 200, 100, 50, 20, 10, 5, 2, 1];
+
+for(let note of notes) {
+
+    let count = Math.floor(amount / note);
+
+    if(count > 0) {
+        document.write("₹" + note + " : " + count + "<br>");
+    }
+
+    amount = amount % note;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Functions</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <script>
+      function factorial(n) {
+        var f = 1;
+        for (var i = 1; i <= n; i++) {
+          f = f * i;
+        }
+        return f;
+      }
+      function fibonacci(n) {
+        var a = 0;
+        var b = 1;
+        var result = "";
+        for (var i = 1; i <= n; i++) {
+          result = result + a + " ";
+          var c = a + b;
+          a = b;
+          b = c;
+        }
+        return result;
+      }
+      function prime(n) {
+        var result = "";
+        for (var i = 2; i <= n; i++) {
+          var isPrime = true;
+          for (var j = 2; j < i; j++) {
+            if (i % j == 0) {
+              isPrime = false;
+              break;
+            }
+          }
+          if (isPrime) {
+            result = result + i + " ";
+          }
+        }
+        return result;
+      }
+      function palindrome(s) {
+        var rev = s.split("").reverse().join("");
+        if (s == rev) {
+          return s + " is a palindrome";
+        } else {
+          return s + " is not a palindrome";
+        }
+      }
+      document.write("<p>Factorial of 5: " + factorial(5) + "</p>");
+      document.write(
+        "<p>Fibonacci series of 10 terms: " + fibonacci(10) + "</p>",
+      );
+      document.write("<p>Prime numbers up to 30: " + prime(30) + "</p>");
+      document.write("<p>" + palindrome("madam") + "</p>");
+      document.write("<p>" + palindrome("hello") + "</p>");
+    </script>
+  </body>
+</html>

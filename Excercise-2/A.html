@@ -1,53 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>College Timetable</title>
-</head>
-<body>
-
-    <table border="1" cellspacing="5" cellpadding="10">
-
-        <caption><b>College Timetable</b></caption>
-
-        <tr>
-            <td colspan="6"><b>Class Timetable</b></td>
-        </tr>
-
-        <tr>
-            <td>Day</td>
-            <td>9-10</td>
-            <td>10-11</td>
-            <td>11-12</td>
-            <td>12-1</td>
-            <td>1-2</td>
-        </tr>
-
-        <tr>
-            <td>Monday</td>
-            <td>Java</td>
-            <td>DBMS</td>
-            <td rowspan="2">FSDI Lab</td>
-            <td>OS</td>
-            <td>Lunch</td>
-        </tr>
-
-        <tr>
-            <td>Tuesday</td>
-            <td>Python</td>
-            <td>Java</td>
-            <td>DBMS</td>
-            <td>Lunch</td>
-        </tr>
-
-        <tr>
-            <td>Wednesday</td>
-            <td colspan="2">FSDI Lab</td>
-            <td>OS</td>
-            <td>Java</td>
-            <td>Lunch</td>
-        </tr>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Tables</title>
+  </head>
+  <body>
+    <h1>HTML Tables Demonstration</h1>
+    <h3>Simple Table</h3>
+    <table border="1">
+      <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Marks</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Ravi</td>
+        <td>85</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sita</td>
+        <td>90</td>
+      </tr>
     </table>
 
-</body>
+    <h3>Table with rowspan</h3>
+    <table border="1">
+      <tr>
+        <th>Department</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td rowspan="2">CSE</td>
+        <td>Ravi</td>
+      </tr>
+      <tr>
+        <td>Sita</td>
+      </tr>
+    </table>
+
+    <h3>Table with colspan</h3>
+    <table border="1">
+      <tr>
+        <th colspan="3">Student Marks</th>
+      </tr>
+      <tr>
+        <td>Maths</td>
+        <td>Science</td>
+        <td>English</td>
+      </tr>
+      <tr>
+        <td>80</td>
+        <td>75</td>
+        <td>90</td>
+      </tr>
+    </table>
+  </body>
 </html>
+

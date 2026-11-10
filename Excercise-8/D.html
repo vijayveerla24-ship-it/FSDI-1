@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let student = {
+    name: "Vijay",
+    age: 20,
+    branch: "IT"
+};
+
+document.write("<h2>Using for-in</h2>");
+
+for(let key in student) {
+    document.write(key + " : " + student[key] + "<br>");
+}
+
+
+let marks = [80, 90, 85];
+
+document.write("<h2>Using forEach</h2>");
+
+marks.forEach(function(mark) {
+    document.write(mark + "<br>");
+});
+
+
+document.write("<h2>Using for-of</h2>");
+
+for(let mark of marks) {
+    document.write(mark + "<br>");
+}
+
+</script>
+
+</body>
+</html>
